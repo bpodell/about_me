@@ -9,9 +9,24 @@ var user = prompt('what is your name');
 alert('hi ' + user + ', I am so glad you want to play my game');
 
 var answer = prompt('Is my favorite color blue?').toLowerCase();
-console.log(answer);
+console.log('favorite color guess' + answer);
 
-if(answer === 'yes' || answer === 'y') {
+//function question(val){
+if(val === 'yes' || val === 'y') {
+  userPoints++;
+} else {
+  alert('wrong');
+}
+//}
+
+console.log('this is the question function', question(answer));
+
+alert('you have' + userPoints + 'points');
+
+var colorBlue = prompt('Is my hair brown?').toLowerCase();
+console.log('hair color guess' + colorBlue);
+
+if(colorBlue === 'yes' || colorBlue === 'y') {
   userPoints++;
 } else {
   alert('wrong');
@@ -19,10 +34,10 @@ if(answer === 'yes' || answer === 'y') {
 
 alert('you have' + userPoints + 'points');
 
-var answer = prompt('Is my hair brown?').toLowerCase();
-console.log(answer);
+var hoodie = prompt('Are hoodies my favorite clothing?').toLowerCase();
+console.log('hoodie guess' + hoodie);
 
-if(answer === 'yes' || answer === 'y') {
+if(hoodie === 'yes' || hoodie === 'y') {
   userPoints++;
 } else {
   alert('wrong');
@@ -30,10 +45,10 @@ if(answer === 'yes' || answer === 'y') {
 
 alert('you have' + userPoints + 'points');
 
-var answer1 = prompt('Are hoodies my favorite clothing?').toLowerCase();
-console.log(answer1);
+var videogame = prompt('Do I like videogames?').toLowerCase();
+console.log('videogame guess' + videogame);
 
-if(answer1 === 'yes' || answer1 === 'y') {
+if(videogame === 'yes' || videogame === 'y') {
   userPoints++;
 } else {
   alert('wrong');
@@ -41,32 +56,10 @@ if(answer1 === 'yes' || answer1 === 'y') {
 
 alert('you have' + userPoints + 'points');
 
-var answer2 = prompt('Do I like videogames?').toLowerCase();
-console.log(answer2);
+var dogs = prompt('Do I have dogs?').toLowerCase();
+console.log(dogs);
 
-if(answer2 === 'yes' || answer2 === 'y') {
-  userPoints++;
-} else {
-  alert('wrong');
-}
-
-alert('you have' + userPoints + 'points');
-
-var answer3 = prompt('Do I have dogs?').toLowerCase();
-console.log(answer3);
-
-if(answer3 === 'yes' || answer3 === 'y') {
-  userPoints++;
-} else {
-  alert('wrong');
-}
-
-alert('you have' + userPoints + 'points');
-
-var answer4 = prompt('Is pizza my favorite food?').toLowerCase();
-console.log(answer4);
-
-if(answer4 === 'yes' || answer4 === 'y') {
+if(dogs === 'yes' || dogs === 'y') {
   userPoints++;
 } else {
   alert('wrong');
