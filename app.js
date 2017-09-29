@@ -11,13 +11,13 @@ alert('hi ' + user + ', I am so glad you want to play my game');
 var answer = prompt('Is my favorite color blue?').toLowerCase();
 console.log('favorite color guess' + answer);
 
-//function question(val){
-if(val === 'yes' || val === 'y') {
-  userPoints++;
-} else {
-  alert('wrong');
+function question(val){
+  if(val === 'yes' || val === 'y') {
+    userPoints++;
+  } else {
+    alert('wrong');
+  }
 }
-//}
 
 console.log('this is the question function', question(answer));
 
@@ -26,43 +26,31 @@ alert('you have' + userPoints + 'points');
 var colorBlue = prompt('Is my hair brown?').toLowerCase();
 console.log('hair color guess' + colorBlue);
 
-if(colorBlue === 'yes' || colorBlue === 'y') {
-  userPoints++;
-} else {
-  alert('wrong');
-}
+question(colorBlue);
+
 
 alert('you have' + userPoints + 'points');
 
 var hoodie = prompt('Are hoodies my favorite clothing?').toLowerCase();
 console.log('hoodie guess' + hoodie);
 
-if(hoodie === 'yes' || hoodie === 'y') {
-  userPoints++;
-} else {
-  alert('wrong');
-}
+question(hoodie);
+
 
 alert('you have' + userPoints + 'points');
 
 var videogame = prompt('Do I like videogames?').toLowerCase();
 console.log('videogame guess' + videogame);
 
-if(videogame === 'yes' || videogame === 'y') {
-  userPoints++;
-} else {
-  alert('wrong');
-}
+question(videogame);
+
 
 alert('you have' + userPoints + 'points');
 
 var dogs = prompt('Do I have dogs?').toLowerCase();
 console.log(dogs);
 
-if(dogs === 'yes' || dogs === 'y') {
-  userPoints++;
-} else {
-  alert('wrong');
-}
+question(dogs);
+
 
 alert('you have' + userPoints + 'points');
