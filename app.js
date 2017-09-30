@@ -73,39 +73,40 @@ var score = 0;
 //   alert('Sorry :(, better luck on the next one!');
 // }
 // Question 6
-var ageGuess = prompt('How old am I?');
+var randInt = Math.random() * 10;
+var roundInt = Math.round(randInt);
+console.log(roundInt);
+var ageGuess = prompt('Can you guess the number between 0 and 10?');
 for (var remainingGuess = 4; remainingGuess > 0; remainingGuess--) {
   var parse = parseInt(ageGuess);
-  if(parse < 26) {
+  if(parse < roundInt) {
     var ageGuess = prompt('Oops, too low... Try again, you have ' + remainingGuess + ' guesses remaining');
 
-  } else if (parse > 26){
-    var ageGuess =  prompt('Hey, im not THAT old... you have ' + remainingGuess + ' guesses remaining');
-  } else if (parse === 26){
+  } else if (parse > roundInt){
+    var ageGuess =  prompt('Try a little lower... ' + remainingGuess + ' guesses remaining');
+  } else if (parse === roundInt){
     alert('Correct!');
     score++;
     remainingGuess = 1;
   }
 }
 console.log(remainingGuess);
-if(remainingGuess === 0) {
-  alert('I\'m 26 years young');
-}
-//Question 7
-var pixar = ['up','ratatouille','inside out'];
-var pixarGuess = prompt('Can you guess one of my favorite Pixar movies?').toLowerCase();
-console.log(pixarGuess);
-for (var remainingGuess2 = 5; remainingGuess2 > 0; remainingGuess2--)
-  if(pixarGuess !== pixar[0] && pixarGuess !== pixar[1] && pixarGuess !== pixar[2]) {
-    var pixarGuess = prompt('I probably like that one, but its not one of my favorites, but you have ' + remainingGuess2 + ' guesses left to try again').toLowerCase();
-    console.log(pixarGuess);
-  } else if(pixarGuess === pixar[0] || pixarGuess === pixar[1] || pixarGuess === pixar[2]){
-    alert('You got it!');
-    score++;
-    remainingGuess2 = 1;
-  }
-console.log(remainingGuess2);
-if(remainingGuess2 === 0) {
-  alert('My top three pixar movies are Up, Ratatouille, and Inside Out. :)');
-}
-alert('Thank you so much for playing my game! You got ' + score + ' points out of a total 7. Great Job!');
+
+// //Question 7
+// var pixar = ['up','ratatouille','inside out'];
+// var pixarGuess = prompt('Can you guess one of my favorite Pixar movies?').toLowerCase();
+// console.log(pixarGuess);
+// for (var remainingGuess2 = 5; remainingGuess2 > 0; remainingGuess2--)
+//   if(pixarGuess !== pixar[0] && pixarGuess !== pixar[1] && pixarGuess !== pixar[2]) {
+//     var pixarGuess = prompt('I probably like that one, but its not one of my favorites, but you have ' + remainingGuess2 + ' guesses left to try again').toLowerCase();
+//     console.log(pixarGuess);
+//   } else if(pixarGuess === pixar[0] || pixarGuess === pixar[1] || pixarGuess === pixar[2]){
+//     alert('You got it!');
+//     score++;
+//     remainingGuess2 = 1;
+//   }
+// console.log(remainingGuess2);
+// if(remainingGuess2 === 0) {
+//   alert('My top three pixar movies are Up, Ratatouille, and Inside Out. :)');
+// }
+// alert('Thank you so much for playing my game! You got ' + score + ' points out of a total 7. Great Job!');
