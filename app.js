@@ -12,7 +12,7 @@ console.log('users name ' + user);
 while(!user) {
   user = prompt('name is required');
 }
-
+// Question 1
 var colorBlue = prompt('Is my favorite color blue?').toLowerCase();
 console.log('favorite color guess ' + colorBlue);
 if(colorBlue === 'yes' || colorBlue === 'y') {
@@ -21,7 +21,7 @@ if(colorBlue === 'yes' || colorBlue === 'y') {
 } else {
   alert('Sorry :(, better luck on the next one!');
 }
-
+// Question 2
 var hairColor = prompt('Is my hair brown?').toLowerCase();
 console.log('hair color guess ' + hairColor);
 if(hairColor === 'yes' || hairColor === 'y') {
@@ -30,7 +30,7 @@ if(hairColor === 'yes' || hairColor === 'y') {
 } else {
   alert('Sorry :(, better luck on the next one!');
 }
-
+// Question 3
 var hoodie = prompt('Are hoodies my favorite clothing?').toLowerCase();
 console.log('hoodie guess ' + hoodie);
 if(hoodie === 'yes' || hoodie === 'y') {
@@ -39,7 +39,7 @@ if(hoodie === 'yes' || hoodie === 'y') {
 } else {
   alert('Sorry :(, better luck on the next one!');
 }
-
+// Question 4
 var videogame = prompt('Do I like videogames?').toLowerCase();
 console.log('videogame guess ' + videogame);
 if(videogame === 'yes' || videogame === 'y') {
@@ -48,7 +48,7 @@ if(videogame === 'yes' || videogame === 'y') {
 } else {
   alert('Sorry :(, better luck on the next one!');
 }
-
+// Question 5
 var dogs = prompt('Do I have dogs?').toLowerCase();
 console.log('dogs guess ' + dogs);
 if(dogs === 'yes' || dogs === 'y') {
