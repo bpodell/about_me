@@ -8,6 +8,9 @@ h1{
   color: black;
 }
 
+h2{
+  font-size: 20px;
+}
 body{
   background: url('https://i.imgur.com/wVpIicX.jpg');
   background-size: cover;
