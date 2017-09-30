@@ -1,9 +1,15 @@
+
 * {
   font-family: sans-serif;
-  background-color: blue;
 
 }
 
 h1{
   color: black;
+}
+
+body{
+  background: url('https://i.imgur.com/wVpIicX.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
