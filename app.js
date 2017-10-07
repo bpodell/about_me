@@ -104,3 +104,8 @@ while (remainingGuess2 > 0) {
 }
 
 alert('Thank you so much for playing my game! You got ' + score + ' points out of a total 7. Great Job!');
+
+
+git checkout - b gh-pages
+git status
+git push origin gh-pages
