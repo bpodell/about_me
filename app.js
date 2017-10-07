@@ -12,7 +12,7 @@ console.log('users name ' + user);
 while(!user) {
   user = prompt('name is required');
 }
-
+// Question 1
 var colorBlue = prompt('Is my favorite color blue?').toLowerCase();
 console.log('favorite color guess ' + colorBlue);
 if(colorBlue === 'yes' || colorBlue === 'y') {
@@ -21,7 +21,7 @@ if(colorBlue === 'yes' || colorBlue === 'y') {
 } else {
   alert('Sorry :(, better luck on the next one!');
 }
-
+// Question 2
 var hairColor = prompt('Is my hair brown?').toLowerCase();
 console.log('hair color guess ' + hairColor);
 if(hairColor === 'yes' || hairColor === 'y') {
@@ -30,7 +30,7 @@ if(hairColor === 'yes' || hairColor === 'y') {
 } else {
   alert('Sorry :(, better luck on the next one!');
 }
-
+// Question 3
 var hoodie = prompt('Are hoodies my favorite clothing?').toLowerCase();
 console.log('hoodie guess ' + hoodie);
 if(hoodie === 'yes' || hoodie === 'y') {
@@ -39,7 +39,7 @@ if(hoodie === 'yes' || hoodie === 'y') {
 } else {
   alert('Sorry :(, better luck on the next one!');
 }
-
+// Question 4
 var videogame = prompt('Do I like videogames?').toLowerCase();
 console.log('videogame guess ' + videogame);
 if(videogame === 'yes' || videogame === 'y') {
@@ -48,7 +48,7 @@ if(videogame === 'yes' || videogame === 'y') {
 } else {
   alert('Sorry :(, better luck on the next one!');
 }
-
+// Question 5
 var dogs = prompt('Do I have dogs?').toLowerCase();
 console.log('dogs guess ' + dogs);
 if(dogs === 'yes' || dogs === 'y') {
@@ -57,7 +57,7 @@ if(dogs === 'yes' || dogs === 'y') {
 } else {
   alert('Sorry :(, better luck on the next one!');
 }
-// Question 6
+//Question 6
 var randInt = Math.random() * 10;
 var roundInt = Math.round(randInt);
 console.log(roundInt);
@@ -76,23 +76,31 @@ for (var remainingGuess = 4; remainingGuess > 0; remainingGuess--) {
     remainingGuess = 1;
   }
 }
+if( parse !== roundInt && remainingGuess === 0) {
+  alert('Sorry, out of guesses');
+}
 console.log('has this many remaining guesses for question 6 ' + remainingGuess);
 
 //Question 7
 var pixar = ['up','ratatouille','inside out'];
-var pixarGuess = prompt('Can you guess one of my favorite Pixar movies?').toLowerCase();
-console.log('Guess for question 7 ' + pixarGuess);
-for (var remainingGuess2 = 5; remainingGuess2 > 0; remainingGuess2--)
-  if(pixarGuess !== pixar[0] && pixarGuess !== pixar[1] && pixarGuess !== pixar[2]) {
-    var pixarGuess = prompt('I probably like that one, but its not one of my favorites, but you have ' + remainingGuess2 + ' guesses left to try again').toLowerCase();
-    console.log('Guess for question 7 ' + pixarGuess);
-  } else if(pixarGuess === pixar[0] || pixarGuess === pixar[1] || pixarGuess === pixar[2]){
-    alert('You got it!');
-    score++;
-    remainingGuess2 = 1;
+var remainingGuess2 = 6;
+var userIsCorrect = false;
+
+while (remainingGuess2 > 0) {
+  var pixarGuess = prompt('Can you guess one of my favorite Pixar movies?').toLowerCase();
+  remainingGuess2--;
+  for (var i = 0; i < pixar.length; i++){
+    if (pixarGuess === pixar[i]){
+      userIsCorrect = true;
+      score++;
+    }
   }
-console.log('This many remaining guesses ' + remainingGuess2);
-if(remainingGuess2 === 0) {
-  alert('My top three pixar movies are Up, Ratatouille, and Inside Out. :)');
+  if (userIsCorrect){
+    alert('You got it! My favorite pixar movies are Up, Ratatouille, and Inside Out');
+    break;
+  }else{
+    alert('sorry, try again!');
+  }
 }
+
 alert('Thank you so much for playing my game! You got ' + score + ' points out of a total 7. Great Job!');
